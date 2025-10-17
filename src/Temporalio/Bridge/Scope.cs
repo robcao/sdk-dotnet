@@ -165,6 +165,10 @@ namespace Temporalio.Bridge
                 {
                     handle.Free();
                 }
+                else if (v is CancellationToken cancellationToken)
+                {
+                    cancellationToken.Dispose();
+                }
             }
             // This keep alive does nothing obviously, but it's good documentation to understand the
             // purpose of this separate dispose call

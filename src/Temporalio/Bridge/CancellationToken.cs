@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace Temporalio.Bridge
 {
@@ -8,6 +9,8 @@ namespace Temporalio.Bridge
     /// </summary>
     internal class CancellationToken : SafeHandle
     {
+        private CancellationTokenRegistration? cancellationCallback;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CancellationToken"/> class.
         /// </summary>
@@ -37,7 +40,8 @@ namespace Temporalio.Bridge
         public static CancellationToken FromThreading(System.Threading.CancellationToken token)
         {
             var ret = new CancellationToken();
-            token.Register(ret.Cancel);
+            ret.cancellationCallback = token.Register(ret.Cancel);
+
             return ret;
         }
 
@@ -55,6 +59,7 @@ namespace Temporalio.Bridge
         /// <inheritdoc/>
         protected override unsafe bool ReleaseHandle()
         {
+            cancellationCallback?.Dispose();
             Interop.Methods.temporal_core_cancellation_token_free(Ptr);
             return true;
         }
