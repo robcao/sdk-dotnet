@@ -32,6 +32,17 @@ namespace Temporalio.Client
         }
 
         /// <summary>
+        /// Invoke CreateAccountAuditLogSink.
+        /// </summary>
+        /// <param name="req">Request for the call.</param>
+        /// <param name="options">Optional RPC options.</param>
+        /// <returns>RPC response</returns>
+        public Task<CreateAccountAuditLogSinkResponse> CreateAccountAuditLogSinkAsync(CreateAccountAuditLogSinkRequest req, RpcOptions? options = null)
+        {
+            return InvokeRpcAsync("CreateAccountAuditLogSink", req, CreateAccountAuditLogSinkResponse.Parser, options);
+        }
+
+        /// <summary>
         /// Invoke CreateApiKey.
         /// </summary>
         /// <param name="req">Request for the call.</param>
@@ -117,6 +128,17 @@ namespace Temporalio.Client
         public Task<CreateUserGroupResponse> CreateUserGroupAsync(CreateUserGroupRequest req, RpcOptions? options = null)
         {
             return InvokeRpcAsync("CreateUserGroup", req, CreateUserGroupResponse.Parser, options);
+        }
+
+        /// <summary>
+        /// Invoke DeleteAccountAuditLogSink.
+        /// </summary>
+        /// <param name="req">Request for the call.</param>
+        /// <param name="options">Optional RPC options.</param>
+        /// <returns>RPC response</returns>
+        public Task<DeleteAccountAuditLogSinkResponse> DeleteAccountAuditLogSinkAsync(DeleteAccountAuditLogSinkRequest req, RpcOptions? options = null)
+        {
+            return InvokeRpcAsync("DeleteAccountAuditLogSink", req, DeleteAccountAuditLogSinkResponse.Parser, options);
         }
 
         /// <summary>
@@ -241,6 +263,28 @@ namespace Temporalio.Client
         }
 
         /// <summary>
+        /// Invoke GetAccountAuditLogSink.
+        /// </summary>
+        /// <param name="req">Request for the call.</param>
+        /// <param name="options">Optional RPC options.</param>
+        /// <returns>RPC response</returns>
+        public Task<GetAccountAuditLogSinkResponse> GetAccountAuditLogSinkAsync(GetAccountAuditLogSinkRequest req, RpcOptions? options = null)
+        {
+            return InvokeRpcAsync("GetAccountAuditLogSink", req, GetAccountAuditLogSinkResponse.Parser, options);
+        }
+
+        /// <summary>
+        /// Invoke GetAccountAuditLogSinks.
+        /// </summary>
+        /// <param name="req">Request for the call.</param>
+        /// <param name="options">Optional RPC options.</param>
+        /// <returns>RPC response</returns>
+        public Task<GetAccountAuditLogSinksResponse> GetAccountAuditLogSinksAsync(GetAccountAuditLogSinksRequest req, RpcOptions? options = null)
+        {
+            return InvokeRpcAsync("GetAccountAuditLogSinks", req, GetAccountAuditLogSinksResponse.Parser, options);
+        }
+
+        /// <summary>
         /// Invoke GetApiKey.
         /// </summary>
         /// <param name="req">Request for the call.</param>
@@ -274,6 +318,17 @@ namespace Temporalio.Client
         }
 
         /// <summary>
+        /// Invoke GetAuditLogs.
+        /// </summary>
+        /// <param name="req">Request for the call.</param>
+        /// <param name="options">Optional RPC options.</param>
+        /// <returns>RPC response</returns>
+        public Task<GetAuditLogsResponse> GetAuditLogsAsync(GetAuditLogsRequest req, RpcOptions? options = null)
+        {
+            return InvokeRpcAsync("GetAuditLogs", req, GetAuditLogsResponse.Parser, options);
+        }
+
+        /// <summary>
         /// Invoke GetConnectivityRule.
         /// </summary>
         /// <param name="req">Request for the call.</param>
@@ -296,6 +351,17 @@ namespace Temporalio.Client
         }
 
         /// <summary>
+        /// Invoke GetCurrentIdentity.
+        /// </summary>
+        /// <param name="req">Request for the call.</param>
+        /// <param name="options">Optional RPC options.</param>
+        /// <returns>RPC response</returns>
+        public Task<GetCurrentIdentityResponse> GetCurrentIdentityAsync(GetCurrentIdentityRequest req, RpcOptions? options = null)
+        {
+            return InvokeRpcAsync("GetCurrentIdentity", req, GetCurrentIdentityResponse.Parser, options);
+        }
+
+        /// <summary>
         /// Invoke GetNamespace.
         /// </summary>
         /// <param name="req">Request for the call.</param>
@@ -304,6 +370,17 @@ namespace Temporalio.Client
         public Task<GetNamespaceResponse> GetNamespaceAsync(GetNamespaceRequest req, RpcOptions? options = null)
         {
             return InvokeRpcAsync("GetNamespace", req, GetNamespaceResponse.Parser, options);
+        }
+
+        /// <summary>
+        /// Invoke GetNamespaceCapacityInfo.
+        /// </summary>
+        /// <param name="req">Request for the call.</param>
+        /// <param name="options">Optional RPC options.</param>
+        /// <returns>RPC response</returns>
+        public Task<GetNamespaceCapacityInfoResponse> GetNamespaceCapacityInfoAsync(GetNamespaceCapacityInfoRequest req, RpcOptions? options = null)
+        {
+            return InvokeRpcAsync("GetNamespaceCapacityInfo", req, GetNamespaceCapacityInfoResponse.Parser, options);
         }
 
         /// <summary>
@@ -494,6 +571,17 @@ namespace Temporalio.Client
         }
 
         /// <summary>
+        /// Invoke SetServiceAccountNamespaceAccess.
+        /// </summary>
+        /// <param name="req">Request for the call.</param>
+        /// <param name="options">Optional RPC options.</param>
+        /// <returns>RPC response</returns>
+        public Task<SetServiceAccountNamespaceAccessResponse> SetServiceAccountNamespaceAccessAsync(SetServiceAccountNamespaceAccessRequest req, RpcOptions? options = null)
+        {
+            return InvokeRpcAsync("SetServiceAccountNamespaceAccess", req, SetServiceAccountNamespaceAccessResponse.Parser, options);
+        }
+
+        /// <summary>
         /// Invoke SetUserGroupNamespaceAccess.
         /// </summary>
         /// <param name="req">Request for the call.</param>
@@ -524,6 +612,17 @@ namespace Temporalio.Client
         public Task<UpdateAccountResponse> UpdateAccountAsync(UpdateAccountRequest req, RpcOptions? options = null)
         {
             return InvokeRpcAsync("UpdateAccount", req, UpdateAccountResponse.Parser, options);
+        }
+
+        /// <summary>
+        /// Invoke UpdateAccountAuditLogSink.
+        /// </summary>
+        /// <param name="req">Request for the call.</param>
+        /// <param name="options">Optional RPC options.</param>
+        /// <returns>RPC response</returns>
+        public Task<UpdateAccountAuditLogSinkResponse> UpdateAccountAuditLogSinkAsync(UpdateAccountAuditLogSinkRequest req, RpcOptions? options = null)
+        {
+            return InvokeRpcAsync("UpdateAccountAuditLogSink", req, UpdateAccountAuditLogSinkResponse.Parser, options);
         }
 
         /// <summary>
@@ -612,6 +711,17 @@ namespace Temporalio.Client
         public Task<UpdateUserGroupResponse> UpdateUserGroupAsync(UpdateUserGroupRequest req, RpcOptions? options = null)
         {
             return InvokeRpcAsync("UpdateUserGroup", req, UpdateUserGroupResponse.Parser, options);
+        }
+
+        /// <summary>
+        /// Invoke ValidateAccountAuditLogSink.
+        /// </summary>
+        /// <param name="req">Request for the call.</param>
+        /// <param name="options">Optional RPC options.</param>
+        /// <returns>RPC response</returns>
+        public Task<ValidateAccountAuditLogSinkResponse> ValidateAccountAuditLogSinkAsync(ValidateAccountAuditLogSinkRequest req, RpcOptions? options = null)
+        {
+            return InvokeRpcAsync("ValidateAccountAuditLogSink", req, ValidateAccountAuditLogSinkResponse.Parser, options);
         }
 
         /// <summary>
